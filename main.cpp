@@ -3,10 +3,10 @@
 #include "CSParser.h"
 
 int main() {
-    Lexer lex("/Users/Apple/Desktop/Study/5_sem/TheoryOfFormalLanguage/csTest.cs");
+    Lexer lex("PATH_TO_CS_FILE");
     //lex.result();
     CSParser parser(lex.get_tokens(), lex.get_values(), lex.get_code());
     parser.parse();
-    parser.get_parse_tree_file("/Users/Apple/Desktop/Study/5_sem/TheoryOfFormalLanguage/parseTree.txt");
+    parser.get_parse_tree_file("PATH_TO_PARSE_TREE_FILE");
     return 0;
 }
